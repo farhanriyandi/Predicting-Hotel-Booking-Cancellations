@@ -31,7 +31,7 @@ Menjelaskan tujuan dari pernyataan masalah:
 * Jawaban pernyataan masalah n
 Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
 
-Rubrik/Kriteria Tambahan (Opsional):
+- Rubrik/Kriteria Tambahan (Opsional):
 * Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut:
 
 - Solution statements
