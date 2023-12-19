@@ -28,16 +28,14 @@ Bagian laporan ini mencakup:
 ### Problem Statements
 Menjelaskan pernyataan masalah latar belakang:
 
-* Pernyataan Masalah 1
-* Pernyataan Masalah 2
-* Pernyataan Masalah n
+* Dari serangkaian fitur yang ada, fitur apa yang paling berpengaruh terhadap pembatalan pemesanan hotel?
+* Bagaimana cara mengetahui pelanggan akan membatalkan pesanan atau tidak dengan karakteristik atau fitur-fitur tertentu?
 
 ### Goals
 Menjelaskan tujuan dari pernyataan masalah:
-* Jawaban pernyataan masalah 1
-* Jawaban pernyataan masalah 2
-* Jawaban pernyataan masalah n
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
+* Mengetahui fitur yang paling berkolerasi terhadap pembatalan pemesanan hotel
+* Membuat model machine learning yang dapat memprediksi pelanggan akan membatalkan pesanan atau tidak seakurat mungkin berdasarkan fitur-fitur yang ada.
+
 
 ### Rubrik/Kriteria Tambahan (Opsional):
 * Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut:
@@ -47,10 +45,10 @@ Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pe
 * Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
 
 # Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: UCI Machine Learning Repository. 
-Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:
+Dataset yang digunakan dalam proyek ini adalah dataset yang berupa informasi pemesanan untuk hotel kota dan hotel resor
+dataset ini dapat diunduh di[Kaggle: Hotel booking demand](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand).
 
-### Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
+### Variabel-variabel pada Hotel booking demand dataset adalah sebagai berikut:
 * accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
 * cuisine : merupakan jenis masakan yang disajikan pada restoran.
 * dst
