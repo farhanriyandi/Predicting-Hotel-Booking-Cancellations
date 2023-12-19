@@ -17,14 +17,14 @@ Format Referensi: Judul Referensi
 Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
 Bagian laporan ini mencakup:
 
-### Problem Statements
+- Problem Statements
 Menjelaskan pernyataan masalah latar belakang:
 
 * Pernyataan Masalah 1
 * Pernyataan Masalah 2
 * Pernyataan Masalah n
 
-Goals
+- Goals
 Menjelaskan tujuan dari pernyataan masalah:
 * Jawaban pernyataan masalah 1
 * Jawaban pernyataan masalah 2
@@ -34,7 +34,7 @@ Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pe
 Rubrik/Kriteria Tambahan (Opsional):
 * Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut:
 
-### Solution statements
+- Solution statements
 * Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
 * Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
 
