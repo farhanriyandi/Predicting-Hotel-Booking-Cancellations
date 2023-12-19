@@ -36,10 +36,6 @@ Menjelaskan tujuan dari pernyataan masalah:
 * Mengetahui fitur yang paling berkolerasi terhadap pembatalan pemesanan hotel
 * Membuat model machine learning yang dapat memprediksi pelanggan akan membatalkan pesanan atau tidak seakurat mungkin berdasarkan fitur-fitur yang ada.
 
-
-### Rubrik/Kriteria Tambahan (Opsional):
-* Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut:
-
 ### Solution statements
 * Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
 * Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
