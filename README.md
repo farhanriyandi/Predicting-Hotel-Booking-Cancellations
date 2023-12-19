@@ -2,15 +2,18 @@
 ### Disusun oleh : Farhan Riyandi
 
 # Domain Proyek
-Pada bagian ini, kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
+__Latar Belakang__
+Perkembangan pesat penggunaan internet saat ini mencerminkan evolusi teknologi yang semakin canggih menuju media berbasis online. Banyak konsumen yang cenderung mencari informasi produk dan jasa melalui internet serta melakukan pembelian online karena keterbatasan waktu dan kemudahan yang diberikan. Sektor pariwisata dan perjalanan adalah salah satu industri yang telah mengadopsi teknologi untuk memesan tempat makan, akomodasi, transportasi, dan layanan lainnya. Pemanfaatan teknologi ini tidak hanya mempermudah konsumen dalam bertransaksi, tetapi juga membantu pengusaha dalam efektif mengelola pendapatan dan mengurangi potensi kerugian perusahaan.
 
-Rubrik/Kriteria Tambahan (Opsional):
+Contohnya, dalam pemesanan kamar hotel, teknologi, khususnya dalam bidang ilmu data, memungkinkan pengelola untuk memahami perilaku pelanggan dan meramalkan kejadian di masa depan. Dengan data yang ada, pengelola dapat menilai apakah pelanggan berpotensi membatalkan pemesanan. Informasi ini memungkinkan pengelola untuk meningkatkan layanan mereka, mengurangi risiko kerugian, dan secara efektif mengelola operasional perusahaan. Selain mengurangi risiko kerugian, pemahaman yang baik tentang perilaku pelanggan juga dapat meningkatkan kepuasan pelanggan, yang pada gilirannya dapat merangsang rekomendasi positif kepada keluarga dan teman-teman. Secara tidak langsung, hal ini dapat meningkatkan pendapatan perusahaan.
 
-* Jelaskan mengapa dan bagaimana masalah tersebut harus diselesaikan
-
-* Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
-
-Format Referensi: Judul Referensi
+* Jelaskan mengapa masalah tersebut harus diselesaikan?
+  Masalah tersebut harus diselesaikan, karena dapat membuat kerugian karena adanya pelanggan yang membatalkan pesanan dalam memesan hotel.
+  
+* bagaimana masalah tersebut harus diselesaikan?
+  Masalah tersebut dapat diselesaikan dengan membangun model machine learning untuk memprediksi pembatalan pesanan hotel.
+  
+Referensi: (Pengaruh Seleksi Fitur Pada Algoritma Machine Learning Untuk Memprediksi Pembatalan Pesanan Hotel)[https://conference.upnvj.ac.id/index.php/senamika/article/view/1290]
 
 # Business Understanding
 
