@@ -39,39 +39,43 @@ Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pe
 * Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
 
 # Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: UCI Machine Learning Repository.
+Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: UCI Machine Learning Repository. 
 Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:
-Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-•	accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-•	cuisine : merupakan jenis masakan yang disajikan pada restoran.
-•	dst
-Rubrik/Kriteria Tambahan (Opsional):
-•	Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+
+### Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
+* accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
+* cuisine : merupakan jenis masakan yang disajikan pada restoran.
+* dst
+
+### Rubrik/Kriteria Tambahan (Opsional):
+* Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
 
 # Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
-Rubrik/Kriteria Tambahan (Opsional):
-•	Menjelaskan proses data preparation yang dilakukan
-•	Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+
+### Rubrik/Kriteria Tambahan (Opsional):
+* Menjelaskan proses data preparation yang dilakukan
+* Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
 
 # Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
-Rubrik/Kriteria Tambahan (Opsional):
-•	Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
-•	Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. Jelaskan proses improvement yang dilakukan.
-•	Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. Jelaskan mengapa memilih model tersebut sebagai model terbaik.
+
+### Rubrik/Kriteria Tambahan (Opsional):
+* Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
+* Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. Jelaskan proses improvement yang dilakukan.
+* Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. Jelaskan mengapa memilih model tersebut sebagai model terbaik.
 
 # Evaluation
 Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
 Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik akurasi, precision, recall, dan F1 score. Jelaskan mengenai beberapa hal berikut:
-•	Penjelasan mengenai metrik yang digunakan
-•	Menjelaskan hasil proyek berdasarkan metrik evaluasi
+* Penjelasan mengenai metrik yang digunakan
+* Menjelaskan hasil proyek berdasarkan metrik evaluasi
 Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
 Rubrik/Kriteria Tambahan (Opsional):
-•	Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
+* Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
 ---Ini adalah bagian akhir laporan---
 Catatan:
-•	Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor Dillinger, Github Guides: Mastering markdown, atau sumber lain di internet. Semangat!
-•	Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
+* Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor Dillinger, Github Guides: Mastering markdown, atau sumber lain di internet. Semangat!
+* Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
 
 
