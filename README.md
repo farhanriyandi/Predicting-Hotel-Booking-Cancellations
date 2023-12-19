@@ -13,24 +13,30 @@ Rubrik/Kriteria Tambahan (Opsional):
 Format Referensi: Judul Referensi
 
 # Business Understanding
+
 Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
 Bagian laporan ini mencakup:
-Problem Statements
+
+### Problem Statements
 Menjelaskan pernyataan masalah latar belakang:
-•	Pernyataan Masalah 1
-•	Pernyataan Masalah 2
-•	Pernyataan Masalah n
+
+* Pernyataan Masalah 1
+* Pernyataan Masalah 2
+* Pernyataan Masalah n
+
 Goals
 Menjelaskan tujuan dari pernyataan masalah:
-•	Jawaban pernyataan masalah 1
-•	Jawaban pernyataan masalah 2
-•	Jawaban pernyataan masalah n
+* Jawaban pernyataan masalah 1
+* Jawaban pernyataan masalah 2
+* Jawaban pernyataan masalah n
 Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
+
 Rubrik/Kriteria Tambahan (Opsional):
-•	Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut:
-Solution statements
-o	Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
-o	Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
+* Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut:
+
+### Solution statements
+* Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
+* Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
 
 # Data Understanding
 Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: UCI Machine Learning Repository.
