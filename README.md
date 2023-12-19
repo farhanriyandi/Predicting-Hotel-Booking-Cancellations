@@ -45,38 +45,38 @@ Dataset yang digunakan dalam proyek ini adalah dataset yang berupa informasi pem
 dataset ini dapat diunduh di [Kaggle: Hotel booking demand](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand).
 
 ### Variabel-variabel pada Hotel booking demand dataset adalah sebagai berikut:.
-* hotel
-* is_canceled
-* lead_time
-* arrival_date_year
-* arrival_date_month
-* arrival_date_week_number
-* arrival_date_day_of_month
-* stays_in_weekend_nights
-* stays_in_week_nights
-* adults
-* children
-* babies
-* meal
-* country
-* market_segment
-* distribution_channel
-* is_repeated_guest
-* previous_cancellations
-* previous_bookings_not_canceled
-* reserved_room_type
-* assigned_room_type
-* booking_changes
-* deposit_type
-* agent
-* company
-* days_in_waiting_list
-* customer_type
-* adr
-* required_car_parking_spaces
-* total_of_special_requests
-* reservation_status
-* reservation_status_date
+* hotel: menunjukkan jenis hotel, apakah itu "Resort Hotel" atau "City Hotel".
+* is_canceled: variabel target yang menunjukkan apakah pemesanan dibatalkan atau tidak (1: dibatalkan, 0: tidak dibatalkan)
+* lead_time: menunjukkan jumlah hari antara tanggal pemesanan dan tanggal kedatangan.
+* arrival_date_year: menunjukkan informasi tentang tahun kedatangan pemesanan.
+* arrival_date_month: menunjukkan informasi tentang bulan kedatangan pemesanan.
+* arrival_date_week_number: fitur yang menunjukkan nomor minggu dalam setahun ketika tamu dijadwalkan untuk tiba
+* arrival_date_day_of_month: menunjukkan informasi tentang tanggal kedatangan pemesanan
+* stays_in_weekend_nights: menunjukkan jumlah malam yang dihabiskan oleh tamu pada akhir pekan
+* stays_in_week_nights: menunjukkan jumlah malam yang dihabiskan oleh tamu pada hari kerja
+* adults: Jumlah tamu dewasa
+* children: Jumlah tamu anak-anak
+* babies: Jumlah tamu bayi
+* meal: Menunjukkan jenis paket makanan yang dimiliki oleh tamu (e.g., BB: Bed & Breakfast, HB: Half Board).
+* country: Negara asal tamu
+* market_segment: menunjukkan segmen pasar tempat pemesanan dibuat
+* distribution_channel: merujuk pada saluran distribusi atau cara di mana tamu membuat pemesanan
+* is_repeated_guest: menunjukkan apakah tamu adalah pengunjung berulang atau bukan
+* previous_cancellations: jumlah pemesanan yang sebelumnya dibatalkan oleh tamu
+* previous_bookings_not_canceled: jumlah pemesanan sebelumnya yang tidak dibatalkan oleh tamu
+* reserved_room_type: tipe kamar yang telah dipesan
+* assigned_room_type: tipe kamar yang diberikan saat check-in
+* booking_changes: jumlah perubahan yang dibuat pada pemesanan sebelum check-in
+* deposit_type: Jenis deposit yang diberikan oleh tamu
+* agent: ID agen
+* company:  ID perusahaan yang terkait dengan pemesanan hotel
+* days_in_waiting_list: jumlah hari dalam waiting list sebelum pemesanan dikonfirmasi
+* customer_type: jenis tamu
+* adr: Average Daily Rate, rata-rata biaya per kamar per malam
+* required_car_parking_spaces: jumlah tempat parkir mobil yang dibutuhkan tamu
+* total_of_special_requests: total permintaan khusus yang dibuat oleh tamu.
+* reservation_status: status pemesanan
+* reservation_status_date: tanggal status pemesanan
 
 ### Rubrik/Kriteria Tambahan (Opsional):
 * Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
