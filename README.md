@@ -89,12 +89,15 @@ Berikut informasi pada dataset :
 Fitur reservation_status memiliki nilai yang sama dengan target yaitu is_canceled. Maka dari itu diputuskan untuk menghapus fitur tersebut
 
 ### Menangani Missing Value
+
 ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/7fd61b8d-ba5a-4dec-8e06-c06839f55eec)
 
 Terdapat data missing value, karena pada fitur company terlalu banyak data yang missng, maka diputuskan untuk menghapus fitur company. Untuk data country akan diisi oleh modus dan agent dan children akan diisi oleh median.
 
 ## Visualisasi countplot pada label
+
 ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/ecf4de44-a268-47ec-aec4-42529ecfef31)
+
 Jika dilihat perbedaan pada kedua class tidak terlalu jauh, maka dari itu saya tidak melakukan oversampling atau undersampling untuk menyeimbangkan data.
 
 # Data Preparation
@@ -103,6 +106,7 @@ Jika dilihat perbedaan pada kedua class tidak terlalu jauh, maka dari itu saya t
  Pada Label Encoding, setiap kategori pada suatu feature akan diurutkan secara alfabet dan direpresentasikan dengan sebuah nilai integer. Pada proyek ini mengapa penulis menggunakan label encoding karena jumlah kategori yang ada relatif banyak maka diputuskan menggunakan label encoding ketimbang one hot encoding.
 
 * Dataset Splitting / Train Test Split
+  
 ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/11f87d3e-66a4-4fb4-8463-3248eefb0c29)
 
 Train test split aja proses membagi data menjadi data latih dan data uji. Data latih digunakan untuk melatih model pembelajaran mesin. Saat proses pelatihan, model belajar dari pola-pola dalam data latih untuk memahami hubungan antara fitur (variabel independen) dan variabel target (variabel dependen). data uji digunakan untuk mengevaluasi kinerja model. Model diuji pada data yang tidak pernah dilihat selama proses pelatihan untuk mengukur seberapa baik model tersebut mampu menggeneralisasi pada data baru. Pada proyek ini penulis dari dataset 119390 membagi data latih 80% dan data uji 20% yang mana 95512 untuk data latih dan 23878 untuk data uji.
@@ -117,6 +121,7 @@ Algoritma pada proyek ini hanya menggunakan 1 algoritma yaitu Random Forest deng
 * min_samples_leaf: 1, 5, 10
 
 Setelah dilakukan modeling dengan semua fitur, kemudian mencari feature importance (Fitur-fitur yang dianggap penting dapat memberikan wawasan tentang faktor-faktor yang paling memengaruhi hasil prediksi model), dengan kata lain ingin memotong fitur dengan mencoba fitur yang benar-benar dianggap penting agar machine tidak terlalu banyak informasi dalam mencari pola. Berikut adalah hasil dari feature importance:
+
 ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/4a56e16d-a353-4625-b335-060cf861df17)
 
 Setelah melihat hasil feature importance penulis mempertimbangkan hanya mengambil 3 fitur paling penting saja untuk melakukan peningkatan akurasi pada model yaitu: reservation_status_date, arrival_date_week_number, arrival_date_year.
