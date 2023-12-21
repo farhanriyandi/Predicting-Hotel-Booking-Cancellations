@@ -37,13 +37,21 @@ Menjelaskan tujuan dari pernyataan masalah:
 * Membuat model machine learning yang dapat memprediksi pelanggan akan membatalkan pesanan atau tidak seakurat mungkin berdasarkan fitur-fitur yang ada.
 
 ### Solution statements
-* Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
-* Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
+* Menggunakan Algoritma Random Forest dengan hyperparameter tuning menggunakan gridsearchcv.
+* Kemudian mencoba meningkatkan akurasi model dengan mencari feature importance, dengan kata lain ingin cut feature agar machine tidak terlalu banyak informasi dalam mencari pola.
 
 # Data Understanding
 Dataset yang digunakan dalam proyek ini adalah dataset yang berupa informasi pemesanan untuk hotel kota dan hotel resor
 dataset ini dapat diunduh di [Kaggle: Hotel booking demand](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand).
 
+Berikut informasi pada dataset :
+
+* Dataset memiliki format CSV (Comma-Seperated Values).
+* Dataset memiliki 119390 sample dengan 32 fitur.
+* Dataset memiliki 16 fitur bertipe int64, 4 fitur bertipe float64, 12 fitur bertipe object.
+* Terdapat missing value pada data
+
+## Exploratory Data Analysis - Deskripsi Variabel
 ### Variabel-variabel pada Hotel booking demand dataset adalah sebagai berikut:.
 * hotel: menunjukkan jenis hotel, apakah itu "Resort Hotel" atau "City Hotel".
 * is_canceled: variabel target yang menunjukkan apakah pemesanan dibatalkan atau tidak (1: dibatalkan, 0: tidak dibatalkan)
@@ -77,6 +85,14 @@ dataset ini dapat diunduh di [Kaggle: Hotel booking demand](https://www.kaggle.c
 * total_of_special_requests: total permintaan khusus yang dibuat oleh tamu.
 * reservation_status: status pemesanan
 * reservation_status_date: tanggal status pemesanan
+  
+Fitur reservation_status memiliki nilai yang sama dengan target yaitu is_canceled. Maka dari itu diputuskan untuk menghapus fitur tersebut
+
+### Menangani Missing Value
+![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/7fd61b8d-ba5a-4dec-8e06-c06839f55eec)
+
+Terdapat data missing value, karena pada fitur company terlalu banyak data yang missng, maka diputuskan untuk menghapus fitur company. Untuk data country akan diisi oleh modus dan agent dan children akan diisi oleh median.
+
 
 ### Rubrik/Kriteria Tambahan (Opsional):
 * Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
