@@ -93,41 +93,45 @@ Fitur reservation_status memiliki nilai yang sama dengan target yaitu is_cancele
 
 Terdapat data missing value, karena pada fitur company terlalu banyak data yang missng, maka diputuskan untuk menghapus fitur company. Untuk data country akan diisi oleh modus dan agent dan children akan diisi oleh median.
 
-
-### Rubrik/Kriteria Tambahan (Opsional):
-* Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+## Visualisasi countplot pada label
+![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/ecf4de44-a268-47ec-aec4-42529ecfef31)
+Jika dilihat perbedaan pada kedua class tidak terlalu jauh, maka dari itu saya tidak melakukan oversampling atau undersampling untuk menyeimbangkan data.
 
 # Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
 
-### Rubrik/Kriteria Tambahan (Opsional):
-* Menjelaskan proses data preparation yang dilakukan
-* Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+* Label Encoding
+ Pada Label Encoding, setiap kategori pada suatu feature akan diurutkan secara alfabet dan direpresentasikan dengan sebuah nilai integer. Pada proyek ini mengapa penulis menggunakan label encoding karena jumlah kategori yang ada relatif banyak maka diputuskan menggunakan label encoding ketimbang one hot encoding.
+
+* Dataset Splitting / Train Test Split
+![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/11f87d3e-66a4-4fb4-8463-3248eefb0c29)
+
+Train test split aja proses membagi data menjadi data latih dan data uji. Data latih digunakan untuk melatih model pembelajaran mesin. Saat proses pelatihan, model belajar dari pola-pola dalam data latih untuk memahami hubungan antara fitur (variabel independen) dan variabel target (variabel dependen). data uji digunakan untuk mengevaluasi kinerja model. Model diuji pada data yang tidak pernah dilihat selama proses pelatihan untuk mengukur seberapa baik model tersebut mampu menggeneralisasi pada data baru. Pada proyek ini penulis dari dataset 119390 membagi data latih 80% dan data uji 20% yang mana 95512 untuk data latih dan 23878 untuk data uji.
+Dan menggunakan stratify=y, yang memastikan bahwa distribusi kelas pada data latih dan data uji tetap seimbang sesuai dengan distribusi kelas pada dataset keseluruhan.
 
 # Modeling
-Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
 
-### Rubrik/Kriteria Tambahan (Opsional):
-* Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
-* Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. Jelaskan proses improvement yang dilakukan.
-* Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. Jelaskan mengapa memilih model tersebut sebagai model terbaik.
+Algoritma pada proyek ini hanya menggunakan 1 algoritma yaitu Random Forest dengan menggunakan hyperparameter tuning menggunakan gridsearchcv. Adapun parameter yang dituning pada proyek ini adalah:
+* n_estimators: 100, 150, 200
+* max_depth: 20, 50, 80
+* max_features: 0.3, 0.6, 0.8
+* min_samples_leaf: 1, 5, 10
+
+Setelah dilakukan modeling dengan semua fitur, kemudian mencari feature importance (Fitur-fitur yang dianggap penting dapat memberikan wawasan tentang faktor-faktor yang paling memengaruhi hasil prediksi model), dengan kata lain ingin memotong fitur dengan mencoba fitur yang benar-benar dianggap penting agar machine tidak terlalu banyak informasi dalam mencari pola. Berikut adalah hasil dari feature importance:
+![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/4a56e16d-a353-4625-b335-060cf861df17)
+
+Setelah melihat hasil feature importance penulis mempertimbangkan hanya mengambil 3 fitur paling penting saja untuk melakukan peningkatan akurasi pada model yaitu: reservation_status_date, arrival_date_week_number, arrival_date_year.
 
 # Evaluation
-Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
+Karena dalam proyek ini adalah klasifikasi metrik evaluasi yang digunakan pada proyek ini adalah metrik akurasi. Dimana formula akurasi adalah sebagai berikut:
 
-Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik akurasi, precision, recall, dan F1 score. Jelaskan mengenai beberapa hal berikut:
-* Penjelasan mengenai metrik yang digunakan
-* Menjelaskan hasil proyek berdasarkan metrik evaluasi
+accuracy = (TP + TN) / (TP + FP TN + FN)
 
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
+| Model       | accuracy train | accuracy test |
+| ------------| ---------------| --------------|
+| RF          | 1.0            | 0.96          |
+| RF (3 fitur)| 0.97           | 0.97          |
 
-### Rubrik/Kriteria Tambahan (Opsional):
-* Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
+Berdasarkan hasil diatas model Random Forest (3 fitur)  merupakan pilihan yang lebih baik karena menunjukkan performa yang baik pada kedua set data train dan test, dan cenderung menghindari overfitting yang mungkin terjadi pada model Random Forest dengan semua fitur. 
 
----Ini adalah bagian akhir laporan---
-
-Catatan:
-* Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor Dillinger, Github Guides: Mastering markdown, atau sumber lain di internet. Semangat!
-* Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
 
 
