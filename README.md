@@ -98,7 +98,7 @@ Terdapat data missing value, karena pada fitur company terlalu banyak data yang 
 
 ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/ecf4de44-a268-47ec-aec4-42529ecfef31)
 
-Jika dilihat perbedaan pada kedua class tidak terlalu jauh, maka dari itu saya tidak melakukan oversampling atau undersampling untuk menyeimbangkan data.
+Jika dilihat perbedaan pada kedua class tidak terlalu jauh, maka dari itu penulis tidak melakukan oversampling atau undersampling untuk menyeimbangkan data.
 
 # Data Preparation
 
