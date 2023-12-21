@@ -104,7 +104,7 @@ Jika dilihat perbedaan pada kedua class tidak terlalu jauh, maka dari itu penuli
   
 ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/11f87d3e-66a4-4fb4-8463-3248eefb0c29)
 
-Train test split aja proses membagi data menjadi data latih dan data uji. Data latih digunakan untuk melatih model pembelajaran mesin. Saat proses pelatihan, model belajar dari pola-pola dalam data latih untuk memahami hubungan antara fitur (variabel independen) dan variabel target (variabel dependen). data uji digunakan untuk mengevaluasi kinerja model. Model diuji pada data yang tidak pernah dilihat selama proses pelatihan untuk mengukur seberapa baik model tersebut mampu menggeneralisasi pada data baru. Pada proyek ini penulis dari dataset 119390 membagi data latih 80% dan data uji 20% yang mana 95512 untuk data latih dan 23878 untuk data uji.
+Train test split proses membagi data menjadi data latih dan data uji. Data latih digunakan untuk melatih model pembelajaran mesin. Saat proses pelatihan, model belajar dari pola-pola dalam data latih untuk memahami hubungan antara fitur (variabel independen) dan variabel target (variabel dependen). data uji digunakan untuk mengevaluasi kinerja model. Model diuji pada data yang tidak pernah dilihat selama proses pelatihan untuk mengukur seberapa baik model tersebut mampu menggeneralisasi pada data baru. Pada proyek ini penulis dari dataset 119390 membagi data latih 80% dan data uji 20% yang mana 95512 untuk data latih dan 23878 untuk data uji.
 Dan menggunakan stratify=y, yang memastikan bahwa distribusi kelas pada data latih dan data uji tetap seimbang sesuai dengan distribusi kelas pada dataset keseluruhan.
 
 # Modeling
