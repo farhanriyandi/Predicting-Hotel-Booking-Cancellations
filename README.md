@@ -15,26 +15,21 @@ Contohnya, dalam pemesanan kamar hotel, teknologi, khususnya dalam bidang ilmu d
 * Jelaskan mengapa masalah tersebut harus diselesaikan?
   Masalah tersebut harus diselesaikan, karena dapat membuat kerugian karena adanya pelanggan yang membatalkan pesanan dalam memesan hotel.
   
-* bagaimana masalah tersebut harus diselesaikan?
+* Bagaimana masalah tersebut harus diselesaikan?
   Masalah tersebut dapat diselesaikan dengan membangun model machine learning untuk memprediksi pembatalan pesanan hotel.
   
 Referensi: [Pengaruh Seleksi Fitur Pada Algoritma Machine Learning Untuk Memprediksi Pembatalan Pesanan Hotel](https://conference.upnvj.ac.id/index.php/senamika/article/view/1290)
 
 # Business Understanding
 
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
-Bagian laporan ini mencakup:
-
 ### Problem Statements
-Menjelaskan pernyataan masalah latar belakang:
-
-* Dari serangkaian fitur yang ada, fitur apa yang paling berpengaruh terhadap pembatalan pemesanan hotel?
 * Bagaimana cara mengetahui pelanggan akan membatalkan pesanan atau tidak dengan karakteristik atau fitur-fitur tertentu?
+* Dari serangkaian fitur yang ada, fitur apa yang paling berpengaruh terhadap pembatalan pemesanan hotel?
 
 ### Goals
 Menjelaskan tujuan dari pernyataan masalah:
-* Mengetahui fitur yang paling berkolerasi terhadap pembatalan pemesanan hotel
 * Membuat model machine learning yang dapat memprediksi pelanggan akan membatalkan pesanan atau tidak seakurat mungkin berdasarkan fitur-fitur yang ada.
+* Mengetahui fitur yang paling penting terhadap pembatalan pemesanan hotel.
 
 ### Solution statements
 * Menggunakan Algoritma Random Forest dengan hyperparameter tuning menggunakan gridsearchcv.
