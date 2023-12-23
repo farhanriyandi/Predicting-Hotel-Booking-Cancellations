@@ -27,16 +27,19 @@ Berdasarkan kondisi yang telah diuraikan sebelumnya, perusahaan akan mengembangk
 ### Problem Statements
 * Dari serangkaian fitur yang ada, fitur apa yang paling berpengaruh terhadap pembatalan pemesanan hotel?
 * Bagaimana cara mengetahui pelanggan akan membatalkan pesanan atau tidak dengan karakteristik atau fitur-fitur tertentu?
+* Bagaimana perbandingan akurasi dari hasil model dengan fitur yang lengkap dari data dengan model dengan akurasi dari pemilihan feature importance random forest?
 
 ### Goals
 Menjelaskan tujuan dari pernyataan masalah:
 * Mengetahui fitur yang paling penting terhadap pembatalan pemesanan hotel.
 * Membuat model machine learning yang dapat memprediksi pelanggan akan membatalkan pesanan atau tidak seakurat mungkin berdasarkan fitur-fitur yang ada.
+* Mencoba membandingkan hasil akurasi dari random forest dengan fitur yang lengkap dengan akurasi dari pemilihan feature importance random forest.
 
 
 ### Solution statements
-* Menggunakan algoritma random forest dengan hyperparameter tuning menggunakan gridsearchcv.
-* Meningkatkan akurasi model dengan menentukan feature importance dari pelatihan model random forest sebelumnya, dengan kata lain ingin memotong fitur ke pelatihan model selanjutnya agar machine tidak terlalu banyak informasi dalam mencari pola.
+* Menggunakan algoritma random forest dengan hyperparameter tuning menggunakan gridsearchcv sebagai baseline model, lalu mencoba melakukan improvement dengan menggunakan feature importance, yang mana hanya ingin menggunakan fitur-fitur paling berpengaruh dalam pelatihan model pertama untuk pelatihan model kedua.
+Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
+* Membandingkan tingkat kedua model yakni model pertama dengan fitur lengkap dengan fitur model kedua dengan hanya fitur yang paling berpengaruh pada model pertama.
 
 # Data Understanding
 Dataset yang digunakan dalam proyek ini adalah dataset yang berupa informasi pemesanan untuk hotel kota dan hotel resor
@@ -49,7 +52,7 @@ Berikut informasi pada dataset :
 * Dataset memiliki 16 fitur bertipe int64, 4 fitur bertipe float64, 12 fitur bertipe object.
 * Terdapat missing value pada data
 
-## Exploratory Data Analysis - Deskripsi Variabel
+## Exploratory Data Analysis - Deskripsi variabel
 ### Variabel-variabel pada Hotel booking demand dataset adalah sebagai berikut:.
 * hotel: menunjukkan jenis hotel, apakah itu "Resort Hotel" atau "City Hotel".
 * is_canceled: variabel target yang menunjukkan apakah pemesanan dibatalkan atau tidak (1: dibatalkan, 0: tidak dibatalkan)
@@ -137,12 +140,16 @@ Jika dilihat perbedaan pada kedua class tidak terlalu jauh, maka dari itu penuli
 
 * Label Encoding
 
-Pada Label Encoding, setiap kategori pada suatu feature akan diurutkan secara alfabet dan direpresentasikan dengan sebuah nilai integer. Pada proyek ini mengapa penulis menggunakan label encoding karena jumlah kategori yang ada relatif banyak maka diputuskan menggunakan label encoding ketimbang one hot encoding.
+Pada Label Encoding, setiap kategori pada suatu feature akan diurutkan secara alfabet dan direpresentasikan dengan sebuah nilai integer. Pada proyek ini mengapa menggunakan label encoding karena jumlah kategori yang ada relatif banyak maka diputuskan menggunakan label encoding ketimbang one hot encoding.
 
 * Dataset Splitting / Train Test Split
 
-Train test split proses membagi data menjadi data latih dan data uji. Data latih digunakan untuk melatih model pembelajaran mesin. Saat proses pelatihan, model belajar dari pola-pola dalam data latih untuk memahami hubungan antara fitur (variabel independen) dan variabel target (variabel dependen). data uji digunakan untuk mengevaluasi kinerja model. Model diuji pada data yang tidak pernah dilihat selama proses pelatihan untuk mengukur seberapa baik model tersebut mampu menggeneralisasi pada data baru. Pada proyek ini penulis dari dataset 119390 membagi data latih 80% dan data uji 20% yang mana 95512 untuk data latih dan 23878 untuk data uji.
-Dan menggunakan stratify=y, yang memastikan bahwa distribusi kelas pada data latih dan data uji tetap seimbang sesuai dengan distribusi kelas pada dataset keseluruhan.
+Train test split proses membagi data menjadi data latih dan data uji. Data latih digunakan untuk melatih model pembelajaran mesin. Saat proses pelatihan, model belajar dari pola-pola dalam data latih untuk memahami hubungan antara fitur (variabel independen) dan variabel target (variabel dependen). data uji digunakan untuk mengevaluasi kinerja model. Model diuji pada data yang tidak pernah dilihat selama proses pelatihan untuk mengukur seberapa baik model tersebut mampu menggeneralisasi pada data baru. Dalam kasus prediksi pembatalan pemesanan hotel digunakan rasio 80:20 dikarenakan 119390 data dalam dataset ini.
+
+Hasil dari pembagian data latih dan data uji dengan rasio 80:20 adakah sebagai berikut:
+&nbsp;• Total data keseluruhan  119390
+&nbsp;• Total data latih  95512
+&nbsp;• Total data uji  23878
 
 # Modeling
 
