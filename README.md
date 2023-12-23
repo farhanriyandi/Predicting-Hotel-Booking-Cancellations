@@ -96,10 +96,28 @@ Fitur reservation_status memiliki nilai yang sama dengan target yaitu is_cancele
 | arrival_date_day_of_month      |  left-aligned         |
 | stays_in_weekend_nights        |  left-aligned         |
 |  stays_in_week_nights          |  left-aligned         |
-|  stays_in_week_nights          |  left-aligned         |
-|  stays_in_week_nights          |  left-aligned         |
-|  stays_in_week_nights          |  left-aligned         |
-| previous_bookings_not_canceled |    centered           |  
+|  adults                        |  left-aligned         |
+|  children                      |  left-aligned         |
+|  babies                        |  left-aligned         |
+|  meal                          |  left-aligned         |
+|  country                       |  left-aligned         |
+|  market_segment                |  left-aligned         |
+|  distribution_channel          |  left-aligned         |
+|  is_repeated_guest             |  left-aligned         |
+|  previous_cancellations        |  left-aligned         |
+|  previous_bookings_not_canceled|    centered           | 
+|  reserved_room_type            |  left-aligned         |
+|  assigned_room_type            |  left-aligned         |
+|  booking_changes               |  left-aligned         |
+|  deposit_type                  |  left-aligned         |
+|  agent                         |  left-aligned         |
+|  company                       |  left-aligned         |
+|  day_in_waiting_list           |  left-aligned         |
+|  customer_type                 |  left-aligned         |
+|  adr                           |  left-aligned         |
+| required_car_parking_spaces    |  left-aligned         |
+|  total_of_special_request      |  left-aligned         |
+|  reservation_status_date       |  left-aligned         |
    
 
 
