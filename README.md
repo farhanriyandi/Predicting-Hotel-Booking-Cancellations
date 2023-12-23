@@ -84,40 +84,39 @@ Fitur reservation_status memiliki nilai yang sama dengan target yaitu is_cancele
 
 ### Menangani Missing Value
 
-![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/7fd61b8d-ba5a-4dec-8e06-c06839f55eec)
 | Fitur                          |  Jumlah Missing Value |
 |--------------------------------|-----------------------|
-| hotel                          |  left-aligned         |
-| is_canceled                    |  left-aligned         |
-| lead_time                      |  left-aligned         |
-| arrival_date_year              |  left-aligned         |
-| arrival_date_month             |  left-aligned         |
-| arrival_date_week_number       |  left-aligned         |
-| arrival_date_day_of_month      |  left-aligned         |
-| stays_in_weekend_nights        |  left-aligned         |
-|  stays_in_week_nights          |  left-aligned         |
-|  adults                        |  left-aligned         |
-|  children                      |  left-aligned         |
-|  babies                        |  left-aligned         |
-|  meal                          |  left-aligned         |
-|  country                       |  left-aligned         |
-|  market_segment                |  left-aligned         |
-|  distribution_channel          |  left-aligned         |
-|  is_repeated_guest             |  left-aligned         |
-|  previous_cancellations        |  left-aligned         |
-|  previous_bookings_not_canceled|    centered           | 
-|  reserved_room_type            |  left-aligned         |
-|  assigned_room_type            |  left-aligned         |
-|  booking_changes               |  left-aligned         |
-|  deposit_type                  |  left-aligned         |
-|  agent                         |  left-aligned         |
-|  company                       |  left-aligned         |
-|  day_in_waiting_list           |  left-aligned         |
-|  customer_type                 |  left-aligned         |
-|  adr                           |  left-aligned         |
-| required_car_parking_spaces    |  left-aligned         |
-|  total_of_special_request      |  left-aligned         |
-|  reservation_status_date       |  left-aligned         |
+|  hotel                         |  0                    |
+|  is_canceled                   |  0                    |
+|  lead_time                     |  0                    |
+|  arrival_date_year             |  0                    |
+|  arrival_date_month            |  0                    |
+|  arrival_date_week_number      |  0                    |
+|  arrival_date_day_of_month     |  0                    |
+|  stays_in_weekend_nights       |  0                    |
+|  stays_in_week_nights          |  0                    |
+|  adults                        |  0                    |
+|  children                      |  4                    |
+|  babies                        |  0                    |
+|  meal                          |  0                    |
+|  country                       |  0                    |
+|  market_segment                |  0                    |
+|  distribution_channel          |  0                    |
+|  is_repeated_guest             |  0                    |
+|  previous_cancellations        |  0                    |
+|  previous_bookings_not_canceled|  0                    |
+|  reserved_room_type            |  0                    |
+|  assigned_room_type            |  0                    |
+|  booking_changes               |  0                    |
+|  deposit_type                  |  0                    |
+|  agent                         |  16340                |
+|  company                       |  112593               |
+|  day_in_waiting_list           |  0                    |
+|  customer_type                 |  0                    |
+|  adr                           |  0                    |
+|  required_car_parking_spaces   |  0                    |
+|  total_of_special_request      |  0                    |
+|  reservation_status_date       |  0                    |
    
 
 
