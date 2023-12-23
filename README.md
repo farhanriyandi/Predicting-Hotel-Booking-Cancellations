@@ -85,6 +85,24 @@ Fitur reservation_status memiliki nilai yang sama dengan target yaitu is_cancele
 ### Menangani Missing Value
 
 ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/7fd61b8d-ba5a-4dec-8e06-c06839f55eec)
+| Fitur                          |  Jumlah Missing Value |
+|--------------------------------|-----------------------|
+| hotel                          |  left-aligned         |
+| is_canceled                    |  left-aligned         |
+| lead_time                      |  left-aligned         |
+| arrival_date_year              |  left-aligned         |
+| arrival_date_month             |  left-aligned         |
+| arrival_date_week_number       |  left-aligned         |
+| arrival_date_day_of_month      |  left-aligned         |
+| stays_in_weekend_nights        |  left-aligned         |
+|  stays_in_week_nights          |  left-aligned         |
+|  stays_in_week_nights          |  left-aligned         |
+|  stays_in_week_nights          |  left-aligned         |
+|  stays_in_week_nights          |  left-aligned         |
+| previous_bookings_not_canceled |    centered           |  
+   
+
+
 
 Terdapat data missing value, karena pada fitur company terlalu banyak data yang missng, maka diputuskan untuk menghapus fitur company. Untuk data country akan diisi oleh modus dan agent dan children akan diisi oleh median.
 
