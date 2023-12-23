@@ -19,6 +19,7 @@ Contohnya, dalam pemesanan kamar hotel, teknologi, khususnya dalam bidang ilmu d
   Masalah tersebut dapat diselesaikan dengan membangun model machine learning untuk memprediksi pembatalan pesanan hotel.
 
 # Business Understanding
+Berdasarkan kondisi yang telah diuraikan sebelumnya, perusahaan akan mengembangkan sebuah sistem prediksi pembatalan pemesanan hotel untuk menjawab permasalahan berikut.
 
 ### Problem Statements
 * Bagaimana cara mengetahui pelanggan akan membatalkan pesanan atau tidak dengan karakteristik atau fitur-fitur tertentu?
@@ -96,11 +97,10 @@ Jika dilihat perbedaan pada kedua class tidak terlalu jauh, maka dari itu penuli
 # Data Preparation
 
 * Label Encoding
- Pada Label Encoding, setiap kategori pada suatu feature akan diurutkan secara alfabet dan direpresentasikan dengan sebuah nilai integer. Pada proyek ini mengapa penulis menggunakan label encoding karena jumlah kategori yang ada relatif banyak maka diputuskan menggunakan label encoding ketimbang one hot encoding.
+
+Pada Label Encoding, setiap kategori pada suatu feature akan diurutkan secara alfabet dan direpresentasikan dengan sebuah nilai integer. Pada proyek ini mengapa penulis menggunakan label encoding karena jumlah kategori yang ada relatif banyak maka diputuskan menggunakan label encoding ketimbang one hot encoding.
 
 * Dataset Splitting / Train Test Split
-  
-![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/11f87d3e-66a4-4fb4-8463-3248eefb0c29)
 
 Train test split proses membagi data menjadi data latih dan data uji. Data latih digunakan untuk melatih model pembelajaran mesin. Saat proses pelatihan, model belajar dari pola-pola dalam data latih untuk memahami hubungan antara fitur (variabel independen) dan variabel target (variabel dependen). data uji digunakan untuk mengevaluasi kinerja model. Model diuji pada data yang tidak pernah dilihat selama proses pelatihan untuk mengukur seberapa baik model tersebut mampu menggeneralisasi pada data baru. Pada proyek ini penulis dari dataset 119390 membagi data latih 80% dan data uji 20% yang mana 95512 untuk data latih dan 23878 untuk data uji.
 Dan menggunakan stratify=y, yang memastikan bahwa distribusi kelas pada data latih dan data uji tetap seimbang sesuai dengan distribusi kelas pada dataset keseluruhan.
