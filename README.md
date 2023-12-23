@@ -10,29 +10,33 @@ Perkembangan pesat penggunaan internet saat ini mencerminkan evolusi teknologi y
 
 [Referensi gambar](https://id.trip.com/hotels/antalya-hotel-detail-3050567/grida-city-hotel/)
 
-Contohnya, dalam pemesanan kamar hotel, teknologi, khususnya dalam bidang ilmu data, memungkinkan pengelola untuk memahami perilaku pelanggan dan meramalkan kejadian di masa depan. Dengan data yang ada, pengelola dapat menilai apakah pelanggan berpotensi membatalkan pemesanan. Informasi ini memungkinkan pengelola untuk meningkatkan layanan mereka, mengurangi risiko kerugian, dan secara efektif mengelola operasional perusahaan. Selain mengurangi risiko kerugian, pemahaman yang baik tentang perilaku pelanggan juga dapat meningkatkan kepuasan pelanggan, yang pada gilirannya dapat merangsang rekomendasi positif kepada keluarga dan teman-teman. Secara tidak langsung, hal ini dapat meningkatkan pendapatan perusahaan.
+Contohnya, dalam pemesanan kamar hotel, teknologi, khususnya dalam bidang ilmu data, memungkinkan pengelola untuk memahami perilaku pelanggan dan meramalkan kejadian di masa depan. Dalam industri perhotelan, manajemen pembatalan pemesanan merupakan aspek kritis yang dapat mempengaruhi kinerja bisnis secara signifikan. Pembatalan pemesanan dapat menyebabkan penurunan pendapatan, meningkatkan biaya operasional, dan bahkan memengaruhi citra merek hotel. Oleh karena itu, pemahaman yang mendalam tentang faktor-faktor yang mempengaruhi pembatalan pemesanan menjadi suatu keharusan.
+
+Saat ini, data pemesanan hotel telah menjadi sumber informasi berharga untuk memahami perilaku pelanggan dan mengidentifikasi pola pembatalan. Dalam konteks ini, tujuan latar belakang masalah ini adalah untuk mengembangkan suatu model prediktif menggunakan algoritma Random Forest guna mengantisipasi dan meminimalkan dampak pembatalan pemesanan hotel. Dengan sistem prediksi pembatalan pemesanan hotel yang dibuat dapat 
+dapat memberikan prediksi pembatalan dengan tepat waktu, memungkinkan manajemen hotel untuk mengidentifikasi reservasi yang berisiko tinggi pembatalan, Dengan mengetahui potensi pembatalan, hotel dapat melakukan penyesuaian harga atau menawarkan insentif kepada pelanggan untuk mempertahankan pemesanan, sehingga mengoptimalkan pendapatan, Dengan informasi yang akurat tentang kecenderungan pembatalan, hotel dapat mengelola kapasitas kamar secara lebih efisien dan mengurangi risiko overbooking. Secara tidak langsung, hal ini dapat meningkatkan pendapatan perusahaan.
 
 * Jelaskan mengapa masalah tersebut harus diselesaikan?
   Masalah tersebut harus diselesaikan, karena dapat membuat kerugian karena adanya pelanggan yang membatalkan pesanan dalam memesan hotel.
   
 * Bagaimana masalah tersebut harus diselesaikan?
-  Masalah tersebut dapat diselesaikan dengan membangun model machine learning untuk memprediksi pembatalan pesanan hotel.
+  Masalah tersebut dapat diselesaikan dengan membangun model machine learning untuk memprediksi pembatalan pesanan hotel dan mencari tahu fitur-fitur yang paling berpengaruh dalam pembatalan pemesanan hotel.
 
 # Business Understanding
 Berdasarkan kondisi yang telah diuraikan sebelumnya, perusahaan akan mengembangkan sebuah sistem prediksi pembatalan pemesanan hotel untuk menjawab permasalahan berikut.
 
 ### Problem Statements
-* Bagaimana cara mengetahui pelanggan akan membatalkan pesanan atau tidak dengan karakteristik atau fitur-fitur tertentu?
 * Dari serangkaian fitur yang ada, fitur apa yang paling berpengaruh terhadap pembatalan pemesanan hotel?
+* Bagaimana cara mengetahui pelanggan akan membatalkan pesanan atau tidak dengan karakteristik atau fitur-fitur tertentu?
 
 ### Goals
 Menjelaskan tujuan dari pernyataan masalah:
-* Membuat model machine learning yang dapat memprediksi pelanggan akan membatalkan pesanan atau tidak seakurat mungkin berdasarkan fitur-fitur yang ada.
 * Mengetahui fitur yang paling penting terhadap pembatalan pemesanan hotel.
+* Membuat model machine learning yang dapat memprediksi pelanggan akan membatalkan pesanan atau tidak seakurat mungkin berdasarkan fitur-fitur yang ada.
+
 
 ### Solution statements
-* Menggunakan Algoritma Random Forest dengan hyperparameter tuning menggunakan gridsearchcv.
-* Kemudian mencoba meningkatkan akurasi model dengan mencari feature importance, dengan kata lain ingin cut feature agar machine tidak terlalu banyak informasi dalam mencari pola.
+* Menggunakan algoritma random forest dengan hyperparameter tuning menggunakan gridsearchcv.
+* Meningkatkan akurasi model dengan menentukan feature importance dari pelatihan model random forest sebelumnya, dengan kata lain ingin memotong fitur ke pelatihan model selanjutnya agar machine tidak terlalu banyak informasi dalam mencari pola.
 
 # Data Understanding
 Dataset yang digunakan dalam proyek ini adalah dataset yang berupa informasi pemesanan untuk hotel kota dan hotel resor
