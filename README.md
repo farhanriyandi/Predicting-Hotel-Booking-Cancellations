@@ -17,8 +17,6 @@ Contohnya, dalam pemesanan kamar hotel, teknologi, khususnya dalam bidang ilmu d
   
 * Bagaimana masalah tersebut harus diselesaikan?
   Masalah tersebut dapat diselesaikan dengan membangun model machine learning untuk memprediksi pembatalan pesanan hotel.
-  
-Referensi: [Pengaruh Seleksi Fitur Pada Algoritma Machine Learning Untuk Memprediksi Pembatalan Pesanan Hotel](https://conference.upnvj.ac.id/index.php/senamika/article/view/1290)
 
 # Business Understanding
 
@@ -132,6 +130,8 @@ accuracy = (TP + TN) / (TP + FP TN + FN)
 | RF (3 fitur)| 0.97           | 0.97          |
 
 Berdasarkan hasil diatas model Random Forest (3 fitur)  merupakan pilihan yang lebih baik karena menunjukkan performa yang baik pada kedua set data train dan test, dan cenderung menghindari overfitting yang mungkin terjadi pada model Random Forest dengan semua fitur. 
+
+Referensi: [Pengaruh Seleksi Fitur Pada Algoritma Machine Learning Untuk Memprediksi Pembatalan Pesanan Hotel](https://conference.upnvj.ac.id/index.php/senamika/article/view/1290)
 
 
 
