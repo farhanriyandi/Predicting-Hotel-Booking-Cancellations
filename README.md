@@ -144,7 +144,7 @@ Berdasarkah hasil visualisasi data pada fitur children dengan boxplot dan histog
 
 Fitur *Country*
 
-Pada data country yakni data kategorik terdapat missing value sebanyak 488 dari 119390. Data tersebut hanya terhilang 0.41% proporsi missing value relatif keci dibawah 1%, maka dari itu pada proyek ini diputuskan menggunakan modus dalam mengisi missing value tersebut.
+Pada data country yakni data kategorik terdapat missing value sebanyak 488 dari 119390. Data tersebut hanya terhilang 0.41% proporsi missing value relatif kecil dibawah 1%, maka dari itu pada proyek ini diputuskan menggunakan modus dalam mengisi missing value tersebut.
 
 ## Visualisasi *countplot* pada label
 
