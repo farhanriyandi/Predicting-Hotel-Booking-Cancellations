@@ -206,7 +206,7 @@ Berikut adalah langkah-langkah umum bagaimana algoritma Random Forest bekerja:
     * _Feature importance_ dapat digunakan untuk mendapatkan pemahaman yang lebih baik tentang kontribusi setiap fitur terhadap model dan membantu dalam pemilihan 
       fitur.
 
-Pada proyek ini menggunakan _hyperparameter tuning_ menggunakan _gridsearchcv_. 
+Pada proyek ini menggunakan _hyperparameter tuning_ menggunakan _gridsearchcv_. *Hyperparameter tuning* dapat meningkatkan kinerja model karena memungkinkan menemukan kombinasi nilai *hyperparameter* yang optimal untuk model.*Grid Search* melibatkan pengujian semua kombinasi yang mungkin dari sejumlah hyperparameter yang telah ditentukan sebelumnya. Ini menciptakan grid dari nilai yang mungkin dan menguji setiap kombinasinya.
 
 adapun parameter yang di *tuning* menggunakan *gridsearchcv* pada proyek ini adalah:
 * *n_estimators*: 100, 150, 200
