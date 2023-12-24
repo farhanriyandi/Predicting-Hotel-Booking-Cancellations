@@ -51,7 +51,11 @@ Terdapat 16 kolom numerik dengan tipe data int64, yaitu: is_canceled, lead_time,
        total_of_special_requests.
 
 perlu diketahui is_canceled adalah target atau label dalam pelatihan model ini.
+
+Fitur reservation_status memiliki nilai yang sama dengan target yaitu is_canceled. Maka dari itu diputuskan untuk menghapus fitur tersebut
 """
+
+df.drop(columns=['reservation_status'], inplace=True)
 
 df.describe()
 
@@ -59,7 +63,7 @@ df.isnull().sum()
 
 """Begitu banyak data yang missing value pada kolom company. dan Maka dari itu diputuskan untuk menghapus kedua fitur tersebut. teruntuk data country akan diisi oleh modus dan agent dan children akan diisi oleh median."""
 
-df.drop(columns=['company', 'reservation_status'], inplace=True)
+df.drop(columns=['company'], inplace=True)
 df.head()
 
 """# Menangani Missing value"""
@@ -123,6 +127,8 @@ from sklearn.pipeline import Pipeline
 
 """### Random Forest"""
 
+from jcopml.plot import plot_confusion_matrix, plot_classification_report, plot_roc_curve
+
 # parameter yang dituning
 gsp.rf_params
 
@@ -130,15 +136,19 @@ pipeline = Pipeline([
     ('algo', RandomForestClassifier(n_jobs=-1, random_state=42))
 ])
 
-model = GridSearchCV(pipeline, gsp.rf_params, cv=3, n_jobs=-1, verbose=1)
-model.fit(X_train, y_train)
+model1 = GridSearchCV(pipeline, gsp.rf_params, cv=3, n_jobs=-1, verbose=1)
+model1.fit(X_train, y_train)
 
-print(model.best_params_)
-print(model.score(X_train, y_train), model.best_score_, model.score(X_test, y_test))
+print(model1.best_params_)
+print(model1.score(X_train, y_train), model1.best_score_, model1.score(X_test, y_test))
+
+plot_confusion_matrix(X_train, y_train, X_test, y_test, model1)
+
+plot_classification_report(X_train, y_train, X_test, y_test, model1, report=True)
 
 from jcopml.feature_importance import mean_score_decrease
 
-df_imp = mean_score_decrease(X_train, y_train, model, plot=True, topk=10)
+df_imp = mean_score_decrease(X_train, y_train, model1, plot=True, topk=10)
 
 """Phase 2"""
 
@@ -151,8 +161,12 @@ pipeline = Pipeline([
     ('algo', RandomForestClassifier(n_jobs=-1, random_state=42))
 ])
 
-model = GridSearchCV(pipeline, gsp.rf_params, cv=3, n_jobs=-1, verbose=1)
-model.fit(X_train, y_train)
+model2 = GridSearchCV(pipeline, gsp.rf_params, cv=3, n_jobs=-1, verbose=1)
+model2.fit(X_train, y_train)
 
-print(model.best_params_)
-print(model.score(X_train, y_train), model.best_score_, model.score(X_test, y_test))
+print(model2.best_params_)
+print(model2.score(X_train, y_train), model2.best_score_, model2.score(X_test, y_test))
+
+plot_confusion_matrix(X_train, y_train, X_test, y_test, model2)
+
+plot_classification_report(X_train, y_train, X_test, y_test, model2, report=True)
