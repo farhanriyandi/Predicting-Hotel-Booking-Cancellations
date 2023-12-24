@@ -200,8 +200,8 @@ Metrik evaluasi yang digunakan pada proyek ini adalah Akurasi, Presisi, Recall, 
 
 1. Akurasi:
    * Formula:
-     
-    ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/518aed33-840a-47ce-9bf0-25c2931460f1)
+
+     ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/518aed33-840a-47ce-9bf0-25c2931460f1)
 
    * Akurasi mengukur sejauh mana model dapat memprediksi dengan benar. Ini adalah rasio antara jumlah prediksi benar dengan total jumlah prediksi.
 
