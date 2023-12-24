@@ -255,12 +255,43 @@ Metrik evaluasi yang digunakan pada proyek ini adalah Akurasi, Presisi, Recall, 
 
 Evaluasi pada model dengan semua fitur:
 
-![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/5991ea7a-7be2-4ceb-b4a4-725bb3ad4182)
+*Train Report*: 
+|               | Precision | Recall | F1 Score | Support |
+|-------------- |-----------|--------|----------|---------|
+| 0             | 1.00      | 1.00   | 1.00     | 60133   |
+| 1             | 1.00      | 1.00   | 1.00     | 35379   |
+| Accuracy      |           |        | 1.00     | 95512   |
+| Macro Avg     | 1.00      | 1.00   | 1.00     | 95512   |
+| Weighted Avg  | 1.00      | 1.00   | 1.00     | 95512   |
+
+*Test Report*: 
+|               | Precision | Recall | F1 Score | Support |
+|-------------- |-----------|--------|----------|---------|
+| 0             | 0.96      | 0.99   | 0.97     | 15033   |
+| 1             | 0.98      | 0.92   | 0.95     | 8845    |
+| Accuracy      |           |        | 0.96     | 23878   |
+| Macro Avg     | 0.97      | 0.95   | 0.96     | 23878   |
+| Weighted Avg  | 0.96      | 0.96   | 0.96     | 23878   |
+
 
 Evaluasi dengan 3 fitur (*reservation_status_date, arrival_date_week_number, arrival_date_year*):
+*Train Report*: 
+|               | Precision | Recall | F1 Score | Support |
+|-------------- |-----------|--------|----------|---------|
+| 0             | 0.96      | 1.00   | 0.98     | 60133   |
+| 1             | 1.00      | 0.93   | 0.96     | 35379   |
+| Accuracy      |           |        | 0.97     | 95512   |
+| Macro Avg     | 0.98      | 0.96   | 0.97     | 95512   |
+| Weighted Avg  | 0.97      | 0.97   | 0.97     | 95512   |
 
-![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/8de81c89-6a6c-4949-8406-9657f5ac1bb2)
-
+*Test Report*: 
+|               | Precision | Recall | F1 Score | Support |
+|-------------- |-----------|--------|----------|---------|
+| 0             | 0.96      | 1.00   | 0.98     | 15033   |
+| 1             | 0.99      | 0.93   | 0.96     | 8845    |
+| Accuracy      |           |        | 0.97     | 23878   |
+| Macro Avg     | 0.98      | 0.96   | 0.97     | 23878   |
+| Weighted Avg  | 0.97      | 0.97   | 0.97     | 23878   |
 
 Berdasarkan hasil diatas model Random Forest dengan 3 fitur hasil *feature importance* saja yaitu reservation_status_date, arrival_date_week_number, arrival_date_year merupakan pilihan yang lebih baik karena menunjukkan performa yang baik  pada akurasi, presisi, *recall* dan *F1-score* pada kedua set data train dan test, dan cenderung menghindari *overfitting* yang mungkin terjadi pada model Random Forest dengan semua fitur. Dengan hasil metrik pada data uji Accuracy 0.97, pada prediksi 0 (tidak membatalkan pesanan) precision 0.96, recall 1.00 dan f1-score 0.98. Pada prediksi 1 (membatalkan pesanan)  precision 0.99, recall 0.93 dan f1-score 0.96. Dari hasil tersebut sudah memenuhi kebutuhan pengguna untuk memprediksi kemungkinan pembatalan pemesanan hotel dengan akurat. 
 
