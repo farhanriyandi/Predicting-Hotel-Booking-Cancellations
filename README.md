@@ -253,7 +253,7 @@ Metrik evaluasi yang digunakan pada proyek ini adalah Akurasi, Presisi, Recall, 
       recall. 
 
 
-Evaluasi pada model dengan semua fitur:
+### Evaluasi pada model dengan semua fitur:
 
 *Train Report*: 
 |               | Precision | Recall | F1 Score | Support |
@@ -274,7 +274,8 @@ Evaluasi pada model dengan semua fitur:
 | Weighted Avg  | 0.96      | 0.96   | 0.96     | 23878   |
 
 
-Evaluasi dengan 3 fitur (*reservation_status_date, arrival_date_week_number, arrival_date_year*):
+### Evaluasi dengan 3 fitur (*reservation_status_date, arrival_date_week_number, arrival_date_year*)
+
 *Train Report*: 
 |               | Precision | Recall | F1 Score | Support |
 |-------------- |-----------|--------|----------|---------|
