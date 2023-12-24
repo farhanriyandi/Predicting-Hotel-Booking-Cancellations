@@ -61,12 +61,44 @@ df.describe()
 
 df.isnull().sum()
 
-"""Begitu banyak data yang missing value pada kolom company. dan Maka dari itu diputuskan untuk menghapus kedua fitur tersebut. teruntuk data country akan diisi oleh modus dan agent dan children akan diisi oleh median."""
+"""Begitu banyak data yang missing value pada kolom company. dan Maka dari itu diputuskan untuk menghapus fitur tersebut."""
 
 df.drop(columns=['company'], inplace=True)
 df.head()
 
-"""# Menangani Missing value"""
+"""### EDA Terhadap data missing value"""
+
+# agent
+sns.boxplot(x=df['agent'])
+
+plt.hist(df['agent'], bins=15, color='blue')
+
+"""Berdasarkah hasil visualisasi data agent dengan boxplot dan histogram, tidak ada outlier tetapi data tersebut tidak berdistribusi normal melainkan skewness positif. Oleh karena itu, median adalah pilihan yang lebih baik untuk mengisi missing value pada data tersebut.
+
+Median adalah nilai tengah dari data, dan merupakan nilai yang paling mewakili data. Median tidak terpengaruh oleh outlier, dan tidak sensitif terhadap distribusi data.
+"""
+
+# agent
+sns.boxplot(x=df['children'])
+
+plt.hist(df['children'], bins=10, color='blue')
+
+"""Berdasarkah hasil visualisasi data pada fitur children dengan boxplot dan histogram, ada outlier dan data tersebut tidak berdistribusi normal melainkan skewness positif. Oleh karena itu, median adalah pilihan yang lebih baik untuk mengisi missing value pada data tersebut. Median adalah nilai tengah dari data, dan merupakan nilai yang paling mewakili data. Median tidak terpengaruh oleh outlier, dan tidak sensitif terhadap distribusi data."""
+
+# Misalnya, kita memiliki dua variabel: nilai_tercapai dan total_target
+missing_value = 488
+total = 119390
+
+# Menghitung presentase
+presentase = (missing_value / total) * 100
+
+# Menampilkan hasil
+print(f'Presentase: {presentase:.2f}%')
+
+"""Pada data country yakni data kategorik terdapat missing value sebanyak 488 dari 119390. Data tersebut hanya terhilang 0.41% termasuk proporsi missing value relatif keci, maka dari itu pada proyek ini diputuskan menggunakan modus dalam mengisi missing value tersebut.
+
+# Menangani Missing value
+"""
 
 # Mengisi missing value
 df['country'] = df['country'].fillna(df['country'].mode().iloc[0])
