@@ -156,8 +156,34 @@ Hasil dari pembagian data latih dan data uji dengan rasio 80:20 adakah sebagai b
 
 Algoritma pada proyek ini hanya menggunakan 1 algoritma yaitu Random Forest dengan menggunakan hyperparameter tuning menggunakan gridsearchcv. Adapun parameter yang dituning pada proyek ini adalah:
 
-  +
+Random Forest adalah sebuah algoritma machine learning yang digunakan untuk tugas klasifikasi, regresi, dan juga untuk menentukan feature importance. Algoritma ini bekerja dengan menggabungkan prediksi dari beberapa pohon keputusan (decision trees) yang dibangun secara acak.
 
+Berikut adalah langkah-langkah umum bagaimana algoritma Random Forest bekerja:
+
+1. Bootstrapping (Random Sampling with Replacement):
+   * Setiap pohon keputusan dalam Random Forest dibangun dengan menggunakan subset acak dari data latih. Ini dilakukan dengan cara melakukan pengambilan sampel         secara acak dengan penggantian dari dataset latih. Proses ini disebut bootstrapping.
+
+2. Membangun Pohon Keputusan (Decision Tree):
+   * Untuk setiap subset yang dihasilkan dari bootstrapping, sebuah pohon keputusan dibangun. Pohon ini dibangun dengan mengambil pertimbangan dari subset 
+     tersebut dan menggunakan metode seperti CART (Classification and Regression Trees) untuk membagi data berdasarkan fitur-fitur yang ada.
+
+3. Prediksi oleh Setiap Pohon:
+   * Setelah pohon-pohon keputusan dibangun, setiap pohon memberikan prediksi untuk setiap data uji. Pada tugas klasifikasi, prediksi dari setiap pohon diambil 
+     berdasarkan mayoritas suara, sedangkan pada regresi, dapat diambil rata-rata prediksi.
+
+4. Aggregasi Prediksi:
+   * Prediksi dari semua pohon digabungkan untuk menghasilkan prediksi akhir. Proses ini disebut penggabungan (aggregation) atau voting.
+
+5. Feature Importance:
+   * Salah satu kelebihan utama dari Random Forest adalah kemampuannya untuk mengukur tingkat kepentingan (importance) dari setiap fitur dalam membuat prediksi. 
+     Ini dapat diukur dengan melihat seberapa sering suatu fitur digunakan untuk membagi data di semua pohon, dan seberapa baik fitur tersebut dapat meningkatkan 
+     prediksi akhir.
+   *  Skor kepentingan fitur dihitung berdasarkan seberapa banyak mengurangi ketidakmurnian (impurity) atau seberapa banyak meningkatkan kriteria pemisahan di           setiap pohon ketika suatu fitur digunakan. Fitur yang sering digunakan dan memberikan kontribusi besar terhadap pemisahan yang baik akan memiliki skor 
+      kepentingan yang tinggi.
+    * Feature importance dapat digunakan untuk mendapatkan pemahaman yang lebih baik tentang kontribusi setiap fitur terhadap model dan membantu dalam pemilihan 
+      fitur.
+
+Adapun parameter yang di tuning menggunakan gridsearchcv pada proyek ini adalah:
 * n_estimators: 100, 150, 200
 * max_depth: 20, 50, 80
 * max_features: 0.3, 0.6, 0.8
