@@ -27,13 +27,13 @@ Berdasarkan kondisi yang telah diuraikan sebelumnya, perusahaan akan mengembangk
 ### Problem Statements
 * Dari serangkaian fitur yang ada, fitur apa yang paling berpengaruh terhadap pembatalan pemesanan hotel?
 * Bagaimana cara mengetahui pelanggan akan membatalkan pesanan atau tidak dengan karakteristik atau fitur-fitur tertentu?
-* Bagaimana perbandingan akurasi dari hasil model dengan fitur yang lengkap dari data dengan model dengan akurasi dari pemilihan feature importance random forest?
+* Bagaimana perbandingan akurasi, presisi, recall dan f1-score dari hasil model dengan fitur yang lengkap pemilihan feature importance atau menggunakan fitur-fitur penting saja pada model random forest?
 
 ### Goals
 Menjelaskan tujuan dari pernyataan masalah:
 * Mengetahui fitur yang paling penting terhadap pembatalan pemesanan hotel.
 * Membuat model machine learning yang dapat memprediksi pelanggan akan membatalkan pesanan atau tidak seakurat mungkin berdasarkan fitur-fitur yang ada.
-* Mencoba membandingkan hasil akurasi dari random forest dengan fitur yang lengkap dengan akurasi dari pemilihan feature importance random forest.
+* Membandingkan hasil akurasi, presisi, recall dan f1-score dari random forest dengan fitur yang lengkap dengan pemilihan feature importance atau menggunakan fitur-fitur penting saja pada model random forest.
 
 
 ### Solution statements
@@ -237,7 +237,7 @@ Evaluasi dengan 3 fitur (reservation_status_date, arrival_date_week_number, arri
 ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/8de81c89-6a6c-4949-8406-9657f5ac1bb2)
 
 
-Berdasarkan hasil diatas model Random Forest (3 fitur)  merupakan pilihan yang lebih baik karena menunjukkan performa yang baik pada kedua set data train dan test, dan cenderung menghindari overfitting yang mungkin terjadi pada model Random Forest dengan semua fitur. 
+Berdasarkan hasil diatas model Random Forest dengan 3 fitur hasil faeture importance saja yaitu reservation_status_date, arrival_date_week_number, arrival_date_year merupakan pilihan yang lebih baik karena menunjukkan performa yang baik  pada akurasi, presisi, recall dan F1-score pada kedua set data train dan test, dan cenderung menghindari overfitting yang mungkin terjadi pada model Random Forest dengan semua fitur. Dengan hasil metrik pada data uji Accuracy 0.97, pada prediksi 0 (tidak membatalkan pesanan) precision 0.96, recall 1.00 dan f1-score 0.98. Pada prediksi 1 (membatalkan pesanan)  precision 0.99, recall 0.93 dan f1-score 0.96. Dari hasil tersebut sudah memenuhi kebutuhan pengguna untuk memprediksi kemungkinan pembatalan pemesanan hotel dengan akurat
 
 Referensi: [Pengaruh Seleksi Fitur Pada Algoritma Machine Learning Untuk Memprediksi Pembatalan Pesanan Hotel](https://conference.upnvj.ac.id/index.php/senamika/article/view/1290)
 
