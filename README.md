@@ -145,7 +145,7 @@ Berdasarkah hasil visualisasi data pada fitur agent dengan boxplot dan histogram
 Berdasarkah hasil visualisasi data pada fitur children dengan boxplot dan histogram, ada outlier dan data tersebut tidak berdistribusi normal melainkan skewness positif. Oleh karena itu, median adalah pilihan yang lebih baik untuk mengisi missing value pada data tersebut. Median adalah nilai tengah dari data, dan merupakan nilai yang paling mewakili data. Median tidak terpengaruh oleh outlier, dan tidak sensitif terhadap distribusi data.
 
 - Fitur *Country*
-- 
+
 Pada data country yakni data kategorik terdapat missing value sebanyak 488 dari 119390. Data tersebut hanya terhilang 0.41% proporsi missing value relatif kecil dibawah 1%, maka dari itu pada proyek ini diputuskan menggunakan modus dalam mengisi missing value tersebut.
 
 ## Visualisasi *countplot* pada label
@@ -176,7 +176,7 @@ Dikarenakan dataset sudah besar yakni 119390, pembagian rasio data latih dan dat
 
 # *Modeling*
 
-Algoritma pada proyek ini hanya menggunakan 1 algoritma yaitu Random Forest dengan menggunakan _hyperparameter tuning_ menggunakan _gridsearchcv_. Adapun parameter yang dituning pada proyek ini adalah:
+Pada proyek ini menggunakan algoritma random forest dikarenakan pada penelitian 'Pengaruh Seleksi Fitur Pada Algoritma Machine Learning Untuk Memprediksi Pembatalan Pesanan Hotel'[1], pada random forest memiliki akurasi yang tinggi yakni mencapai 98%. Oleh karena itu dalam proyek ini menggunakan algoritma *random forest*. 
 
 _Random Forest_ adalah sebuah algoritma machine learning yang digunakan untuk tugas klasifikasi, regresi, dan juga untuk menentukan _feature importance_. Algoritma ini bekerja dengan menggabungkan prediksi dari beberapa pohon keputusan _(decision trees)_ yang dibangun secara acak.
 
@@ -206,7 +206,9 @@ Berikut adalah langkah-langkah umum bagaimana algoritma Random Forest bekerja:
     * _Feature importance_ dapat digunakan untuk mendapatkan pemahaman yang lebih baik tentang kontribusi setiap fitur terhadap model dan membantu dalam pemilihan 
       fitur.
 
-Adapun parameter yang di tuning menggunakan gridsearchcv pada proyek ini adalah:
+Pada proyek ini menggunakan _hyperparameter tuning_ menggunakan _gridsearchcv_. 
+
+adapun parameter yang di *tuning* menggunakan *gridsearchcv* pada proyek ini adalah:
 * *n_estimators*: 100, 150, 200
 * *max_depth*: 20, 50, 80
 * *max_features*: 0.3, 0.6, 0.8
