@@ -127,7 +127,8 @@ Fitur reservation_status memiliki nilai yang sama dengan target yaitu is_cancele
 Begitu banyak data yang missing value pada kolom *company* dan maka dari itu diputuskan untuk menghapus fitur tersebut.
 
 ## EDA Terhadap data *missing value*
-Fitur *Agent*
+
+- Fitur *Agent*
 
 ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/22cbdce7-e8c2-4dc0-8f4b-98c49368426b)
 
@@ -135,15 +136,16 @@ Fitur *Agent*
 
 Berdasarkah hasil visualisasi data pada fitur agent dengan boxplot dan histogram, tidak ada outlier tetapi data tersebut tidak berdistribusi normal melainkan skewness positif. Oleh karena itu, median adalah pilihan yang lebih baik untuk mengisi missing value pada data tersebut. Median adalah nilai tengah dari data, dan merupakan nilai yang paling mewakili data. Median tidak terpengaruh oleh outlier, dan tidak sensitif terhadap distribusi data.
 
-Fitur *Children*
+- Fitur *Children*
+
 ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/f46421f5-a34d-4527-978c-3da1b4ede71c)
 
 ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/eabb3670-5e36-426f-8623-4d235725d8ef)
 
 Berdasarkah hasil visualisasi data pada fitur children dengan boxplot dan histogram, ada outlier dan data tersebut tidak berdistribusi normal melainkan skewness positif. Oleh karena itu, median adalah pilihan yang lebih baik untuk mengisi missing value pada data tersebut. Median adalah nilai tengah dari data, dan merupakan nilai yang paling mewakili data. Median tidak terpengaruh oleh outlier, dan tidak sensitif terhadap distribusi data.
 
-Fitur *Country*
-
+- Fitur *Country*
+- 
 Pada data country yakni data kategorik terdapat missing value sebanyak 488 dari 119390. Data tersebut hanya terhilang 0.41% proporsi missing value relatif kecil dibawah 1%, maka dari itu pada proyek ini diputuskan menggunakan modus dalam mengisi missing value tersebut.
 
 ## Visualisasi *countplot* pada label
@@ -156,18 +158,22 @@ Jika dilihat perbedaan pada kedua *class* tidak terlalu jauh, maka dari itu dipu
 
 * *Label Encoding*
 
-Pada _Label Encoding_, setiap kategori pada suatu feature akan diurutkan secara alfabet dan direpresentasikan dengan sebuah nilai integer. Pada proyek ini mengapa menggunakan _label encoding_ karena jumlah kategori yang ada relatif banyak maka diputuskan menggunakan _label encoding_ ketimbang _one hot encoding_.
+Pada _Label Encoding_, setiap kategori pada suatu *feature* akan diurutkan secara alfabet dan direpresentasikan dengan sebuah nilai integer. Pada proyek ini mengapa menggunakan _label encoding_ ketimbang _one hot encoding_:
+  * Memiliki variabel kategori dengan jumlah kategori yang sangat banyak yakni 30 fitur.
+  * Label Encoding dapat lebih efisien dalam hal penggunaan memori karena tidak membuat kolom baru untuk setiap kategori seperti yang dilakukan oleh One-Hot Encoding.
 
 * _Dataset Splitting / Train Test Split_
 
-_Train test split_ proses membagi data menjadi data latih dan data uji. Data latih digunakan untuk melatih model pembelajaran mesin. Saat proses pelatihan, model belajar dari pola-pola dalam data latih untuk memahami hubungan antara fitur (variabel independen) dan variabel target (variabel dependen). data uji digunakan untuk mengevaluasi kinerja model. Model diuji pada data yang tidak pernah dilihat selama proses pelatihan untuk mengukur seberapa baik model tersebut mampu menggeneralisasi pada data baru. Dalam kasus prediksi pembatalan pemesanan hotel digunakan rasio 80:20 dikarenakan 119390 data dalam dataset ini.
+*Train test split* proses membagi data menjadi data latih dan data uji. Data latih digunakan untuk melatih model pembelajaran mesin. Saat proses pelatihan, model belajar dari pola-pola dalam data latih untuk memahami hubungan antara fitur (variabel independen) dan variabel target (variabel dependen). data uji digunakan untuk mengevaluasi kinerja model. Model diuji pada data yang tidak pernah dilihat selama proses pelatihan untuk mengukur seberapa baik model tersebut mampu menggeneralisasi pada data baru. Dalam kasus prediksi pembatalan pemesanan hotel digunakan rasio 80:20 dikarenakan 119390 data dalam dataset ini.
 
 Hasil dari pembagian data latih dan data uji dengan rasio 80:20 adakah sebagai berikut:
 
   * Total data keseluruhan  119390
   * Total data latih  95512
   * Total data uji  23878
-    
+
+Dikarenakan dataset sudah besar yakni 119390, pembagian rasio data latih dan data uji 80:20 pada data uji sudah memiliki cukup data untuk menguji model memiliki kinerja yang baik.
+
 # *Modeling*
 
 Algoritma pada proyek ini hanya menggunakan 1 algoritma yaitu Random Forest dengan menggunakan _hyperparameter tuning_ menggunakan _gridsearchcv_. Adapun parameter yang dituning pada proyek ini adalah:
