@@ -124,7 +124,7 @@ Fitur reservation_status memiliki nilai yang sama dengan target yaitu is_cancele
 |  total_of_special_request      |  0                    |
 |  reservation_status_date       |  0                    |
 
-Begitu banyak data yang missing value pada kolom company. dan Maka dari itu diputuskan untuk menghapus fitur tersebut.
+Begitu banyak data yang missing value pada kolom *company* dan maka dari itu diputuskan untuk menghapus fitur tersebut.
 
 ## EDA Terhadap data *missing value*
 Fitur *Agent*
