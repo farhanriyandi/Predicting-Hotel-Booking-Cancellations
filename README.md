@@ -123,11 +123,28 @@ Fitur reservation_status memiliki nilai yang sama dengan target yaitu is_cancele
 |  required_car_parking_spaces   |  0                    |
 |  total_of_special_request      |  0                    |
 |  reservation_status_date       |  0                    |
-   
 
+Begitu banyak data yang missing value pada kolom company. dan Maka dari itu diputuskan untuk menghapus fitur tersebut.
 
+## EDA Terhadap data *missing value*
+Fitur *Agent*
 
-Terdapat data *missing value*, karena pada fitur *company* terlalu banyak data yang *missing*, maka diputuskan untuk menghapus fitur *company*. Untuk data *country* akan diisi oleh modus dan *agent* dan *children* akan diisi oleh median.
+![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/22cbdce7-e8c2-4dc0-8f4b-98c49368426b)
+
+![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/7994d1ce-30dd-463d-b015-2e78a59f2b83)
+
+Berdasarkah hasil visualisasi data pada fitur agent dengan boxplot dan histogram, tidak ada outlier tetapi data tersebut tidak berdistribusi normal melainkan skewness positif. Oleh karena itu, median adalah pilihan yang lebih baik untuk mengisi missing value pada data tersebut. Median adalah nilai tengah dari data, dan merupakan nilai yang paling mewakili data. Median tidak terpengaruh oleh outlier, dan tidak sensitif terhadap distribusi data.
+
+Fitur *Children*
+![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/f46421f5-a34d-4527-978c-3da1b4ede71c)
+
+![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/eabb3670-5e36-426f-8623-4d235725d8ef)
+
+Berdasarkah hasil visualisasi data pada fitur children dengan boxplot dan histogram, ada outlier dan data tersebut tidak berdistribusi normal melainkan skewness positif. Oleh karena itu, median adalah pilihan yang lebih baik untuk mengisi missing value pada data tersebut. Median adalah nilai tengah dari data, dan merupakan nilai yang paling mewakili data. Median tidak terpengaruh oleh outlier, dan tidak sensitif terhadap distribusi data.
+
+Fitur *Country*
+
+Pada data country yakni data kategorik terdapat missing value sebanyak 488 dari 119390. Data tersebut hanya terhilang 0.41% proporsi missing value relatif keci dibawah 1%, maka dari itu pada proyek ini diputuskan menggunakan modus dalam mengisi missing value tersebut.
 
 ## Visualisasi *countplot* pada label
 
