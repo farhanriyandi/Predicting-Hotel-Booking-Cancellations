@@ -262,7 +262,9 @@ Evaluasi dengan 3 fitur (*reservation_status_date, arrival_date_week_number, arr
 ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/8de81c89-6a6c-4949-8406-9657f5ac1bb2)
 
 
-Berdasarkan hasil diatas model Random Forest dengan 3 fitur hasil *feature importance* saja yaitu reservation_status_date, arrival_date_week_number, arrival_date_year merupakan pilihan yang lebih baik karena menunjukkan performa yang baik  pada akurasi, presisi, *recall* dan *F1-score* pada kedua set data train dan test, dan cenderung menghindari overfitting yang mungkin terjadi pada model Random Forest dengan semua fitur. Dengan hasil metrik pada data uji Accuracy 0.97, pada prediksi 0 (tidak membatalkan pesanan) precision 0.96, recall 1.00 dan f1-score 0.98. Pada prediksi 1 (membatalkan pesanan)  precision 0.99, recall 0.93 dan f1-score 0.96. Dari hasil tersebut sudah memenuhi kebutuhan pengguna untuk memprediksi kemungkinan pembatalan pemesanan hotel dengan akurat
+Berdasarkan hasil diatas model Random Forest dengan 3 fitur hasil *feature importance* saja yaitu reservation_status_date, arrival_date_week_number, arrival_date_year merupakan pilihan yang lebih baik karena menunjukkan performa yang baik  pada akurasi, presisi, *recall* dan *F1-score* pada kedua set data train dan test, dan cenderung menghindari *overfitting* yang mungkin terjadi pada model Random Forest dengan semua fitur. Dengan hasil metrik pada data uji Accuracy 0.97, pada prediksi 0 (tidak membatalkan pesanan) precision 0.96, recall 1.00 dan f1-score 0.98. Pada prediksi 1 (membatalkan pesanan)  precision 0.99, recall 0.93 dan f1-score 0.96. Dari hasil tersebut sudah memenuhi kebutuhan pengguna untuk memprediksi kemungkinan pembatalan pemesanan hotel dengan akurat. 
+
+# Kesimpulan
 
 # Referensi
 [1] I. G. N. Daffa Adnyana, et al., "Pengaruh Seleksi Fitur Pada Algoritma *Machine Learning* Untuk Memprediksi Pembatalan Pesanan Hotel," *Prosiding* Seminar Nasional Mahasiswa Bidang Ilmu Komputer dan Aplikasinya, vol. 2, no. 1, 2021.
