@@ -200,24 +200,28 @@ Metrik evaluasi yang digunakan pada proyek ini adalah Akurasi, Presisi, Recall, 
 
 1. Akurasi:
    * Formula:
+     
     ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/518aed33-840a-47ce-9bf0-25c2931460f1)
 
    * Akurasi mengukur sejauh mana model dapat memprediksi dengan benar. Ini adalah rasio antara jumlah prediksi benar dengan total jumlah prediksi.
 
 2. Presisi:
    * Formula:
+     
      ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/6f1e517d-eaa3-48e0-91a1-71c33394757f)
 
    * Presisi mengukur sejauh mana model dapat memprediksi positif dengan benar. Ini memberikan informasi tentang berapa persen dari kelas positif yang diprediksi benar oleh model.
 
 3. Recall:
    * Formula:
+     
      ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/02b83806-035f-4b7d-8291-45784a9676a8)
      
    * Recall mengukur sejauh mana model dapat mendeteksi semua instans positif. Ini memberikan informasi tentang berapa persen dari seluruh kelas positif yang berhasil diidentifikasi oleh model.
    
 4.  F1-Sore
     * Formula:
+      
       ![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/1b67a285-181d-47e6-ba16-fbb6a17550e4)
 
     * F1-Score adalah harmonic mean dari presisi dan recall. Ini memberikan keseimbangan antara presisi dan recall. F1-Score tinggi menunjukkan bahwa model memiliki keseimbangan yang baik antara presisi dan 
