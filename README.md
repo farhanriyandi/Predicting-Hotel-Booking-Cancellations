@@ -155,6 +155,9 @@ Hasil dari pembagian data latih dan data uji dengan rasio 80:20 adakah sebagai b
 # Modeling
 
 Algoritma pada proyek ini hanya menggunakan 1 algoritma yaitu Random Forest dengan menggunakan hyperparameter tuning menggunakan gridsearchcv. Adapun parameter yang dituning pada proyek ini adalah:
+
+  +
+
 * n_estimators: 100, 150, 200
 * max_depth: 20, 50, 80
 * max_features: 0.3, 0.6, 0.8
