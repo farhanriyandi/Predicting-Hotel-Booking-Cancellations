@@ -147,9 +147,12 @@ Pada Label Encoding, setiap kategori pada suatu feature akan diurutkan secara al
 Train test split proses membagi data menjadi data latih dan data uji. Data latih digunakan untuk melatih model pembelajaran mesin. Saat proses pelatihan, model belajar dari pola-pola dalam data latih untuk memahami hubungan antara fitur (variabel independen) dan variabel target (variabel dependen). data uji digunakan untuk mengevaluasi kinerja model. Model diuji pada data yang tidak pernah dilihat selama proses pelatihan untuk mengukur seberapa baik model tersebut mampu menggeneralisasi pada data baru. Dalam kasus prediksi pembatalan pemesanan hotel digunakan rasio 80:20 dikarenakan 119390 data dalam dataset ini.
 
 Hasil dari pembagian data latih dan data uji dengan rasio 80:20 adakah sebagai berikut:
-&nbsp;• Total data keseluruhan  119390
-&nbsp;• Total data latih  95512
-&nbsp;• Total data uji  23878
+
+&nbsp; * Total data keseluruhan  119390
+
+&nbsp; * Total data latih  95512
+
+&nbsp; * otal data uji  23878
 
 # Modeling
 
