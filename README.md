@@ -191,19 +191,23 @@ Adapun parameter yang di tuning menggunakan gridsearchcv pada proyek ini adalah:
 
 Setelah dilakukan modeling dengan semua fitur, kemudian mencari feature importance (Fitur-fitur yang dianggap penting dapat memberikan wawasan tentang faktor-faktor yang paling memengaruhi hasil prediksi model), dengan kata lain ingin memotong fitur dengan mencoba fitur yang benar-benar dianggap penting agar machine tidak terlalu banyak informasi dalam mencari pola. Berikut adalah hasil dari feature importance:
 
-![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/4a56e16d-a353-4625-b335-060cf861df17)
+![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/bc0b9996-6c44-491b-9e95-37de67c2d8b0)
 
-Setelah melihat hasil feature importance penulis mempertimbangkan hanya mengambil 3 fitur paling penting saja untuk melakukan peningkatan akurasi pada model yaitu: reservation_status_date, arrival_date_week_number, arrival_date_year.
+Setelah melihat hasil feature importance, diputuskan hanya mengambil 3 fitur paling penting saja untuk melakukan peningkatan akurasi pada model yaitu: reservation_status_date, arrival_date_week_number, arrival_date_year.
 
 # Evaluation
 Karena dalam proyek ini adalah klasifikasi metrik evaluasi yang digunakan pada proyek ini adalah metrik akurasi. Dimana formula akurasi adalah sebagai berikut:
 
 accuracy = (TP + TN) / (TP + FP TN + FN)
 
-| Model       | accuracy train | accuracy test |
-| ------------| ---------------| --------------|
-| RF          | 1.0            | 0.96          |
-| RF (3 fitur)| 0.97           | 0.97          |
+Evaluasi pada model dengan semua fitur:
+
+![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/5991ea7a-7be2-4ceb-b4a4-725bb3ad4182)
+
+Evaluasi dengan 3 fitur (reservation_status_date, arrival_date_week_number, arrival_date_year):
+
+![image](https://github.com/farhanriyandi/Predicting-Hotel-Booking-Cancellations/assets/67671418/8de81c89-6a6c-4949-8406-9657f5ac1bb2)
+
 
 Berdasarkan hasil diatas model Random Forest (3 fitur)  merupakan pilihan yang lebih baik karena menunjukkan performa yang baik pada kedua set data train dan test, dan cenderung menghindari overfitting yang mungkin terjadi pada model Random Forest dengan semua fitur. 
 
