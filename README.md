@@ -148,11 +148,11 @@ Train test split proses membagi data menjadi data latih dan data uji. Data latih
 
 Hasil dari pembagian data latih dan data uji dengan rasio 80:20 adakah sebagai berikut:
 
-&nbsp; * Total data keseluruhan  119390
+&nbsp; - Total data keseluruhan  119390
 
-&nbsp; * Total data latih  95512
+&nbsp; - Total data latih  95512
 
-&nbsp; * otal data uji  23878
+&nbsp; - Total data uji  23878
 
 # Modeling
 
