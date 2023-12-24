@@ -10,10 +10,7 @@ Perkembangan pesat penggunaan internet saat ini mencerminkan evolusi teknologi y
 
 [Referensi gambar](https://id.trip.com/hotels/antalya-hotel-detail-3050567/grida-city-hotel/)
 
-Contohnya, dalam pemesanan kamar hotel, teknologi, khususnya dalam bidang ilmu data, memungkinkan pengelola untuk memahami perilaku pelanggan dan meramalkan kejadian di masa depan [1]. Dalam industri perhotelan, manajemen pembatalan pemesanan merupakan aspek kritis yang dapat mempengaruhi kinerja bisnis secara signifikan. Pembatalan pemesanan dapat menyebabkan penurunan pendapatan, meningkatkan biaya operasional, dan bahkan memengaruhi citra merek hotel. Oleh karena itu, pemahaman yang mendalam tentang faktor-faktor yang mempengaruhi pembatalan pemesanan menjadi suatu keharusan.
-
-Saat ini, data pemesanan hotel telah menjadi sumber informasi berharga untuk memahami perilaku pelanggan dan mengidentifikasi pola pembatalan. Dalam konteks ini, tujuan latar belakang masalah ini adalah untuk mengembangkan suatu model prediktif menggunakan algoritma Random Forest guna mengantisipasi dan meminimalkan dampak pembatalan pemesanan hotel. Dengan sistem prediksi pembatalan pemesanan hotel yang dibuat
-dapat memberikan prediksi pembatalan dengan tepat waktu, memungkinkan manajemen hotel untuk mengidentifikasi reservasi yang berisiko tinggi pembatalan, Dengan mengetahui potensi pembatalan, hotel dapat melakukan penyesuaian harga atau menawarkan insentif kepada pelanggan untuk mempertahankan pemesanan, sehingga mengoptimalkan pendapatan, Dengan informasi yang akurat tentang kecenderungan pembatalan, hotel dapat mengelola kapasitas kamar secara lebih efisien dan mengurangi risiko *overbooking*. Secara tidak langsung, hal ini dapat meningkatkan pendapatan perusahaan.
+Contohnya, Dalam pemesanan kamar hotel, kemajuan teknologi terutama di bidang ilmu data memungkinkan pengelola untuk memahami tingkah laku pelanggan dan meramalkan kejadian di masa depan. Sebagai contoh, dalam pemesanan kamar hotel, pengelola dapat memperoleh wawasan apakah pelanggan berpotensi melakukan pembatalan berdasarkan analisis data yang ada. Dengan pemahaman yang baik terhadap tingkah laku pelanggan berdasarkan data, pengelola dapat meningkatkan kualitas layanan mereka untuk mengurangi potensi kerugian. Selain mengurangi kerugian, pemahaman yang mendalam terhadap kebiasaan pelanggan memungkinkan pengelola untuk memberikan layanan yang memuaskan, yang pada gilirannya dapat menyebabkan rekomendasi positif dari pelanggan kepada keluarga dan teman-teman mereka. Dengan demikian, secara tidak langsung dapat meningkatkan pendapatan melalui peningkatan reputasi dan kepuasan pelanggan [1]. 
 
 * Jelaskan mengapa masalah tersebut harus diselesaikan?
   Masalah tersebut harus diselesaikan, karena dapat membuat kerugian karena adanya pelanggan yang membatalkan pesanan dalam memesan hotel.
@@ -22,7 +19,7 @@ dapat memberikan prediksi pembatalan dengan tepat waktu, memungkinkan manajemen 
   Masalah tersebut dapat diselesaikan dengan membangun model machine learning untuk memprediksi pembatalan pesanan hotel dan mencari tahu fitur-fitur yang paling berpengaruh dalam pembatalan pemesanan hotel.
 
 # *Business Understanding*
-Berdasarkan kondisi yang telah diuraikan sebelumnya, perusahaan akan mengembangkan sebuah sistem prediksi pembatalan pemesanan hotel untuk menjawab permasalahan berikut.
+Berdasarkan kondisi yang telah diuraikan sebelumnya, kemajuan teknologi di bidang ilmu data memainkan peran krusial dalam memahami dan meramalkan tingkah laku pelanggan. Analisis data dapat memberikan pengelola hotel wawasan mendalam mengenai kemungkinan pembatalan pemesanan, membuka peluang untuk strategi bisnis yang lebih cerdas dengan mengembangkan sebuah sistem prediksi pembatalan pemesanan hotel. 
 
 ### *Problem Statements*
 * Dari serangkaian fitur yang ada, fitur apa yang paling berpengaruh terhadap pembatalan pemesanan hotel?
@@ -37,7 +34,7 @@ Menjelaskan tujuan dari pernyataan masalah:
 
 
 ### *Solution statements*
-* Menggunakan algoritma *random forest* dengan *hyperparameter tuning* menggunakan *gridsearchcv* sebagai baseline model, lalu mencoba melakukan *improvement* dengan menggunakan *feature importance*, yang mana hanya ingin menggunakan fitur-fitur paling berpengaruh dalam pelatihan model pertama untuk pelatihan model kedua.
+* Menggunakan algoritma *random forest* dengan *hyperparameter tuning* menggunakan *gridsearchcv* sebagai *baseline* model, lalu mencoba melakukan *improvement* dengan menggunakan *feature importance*, yang mana hanya ingin menggunakan fitur-fitur paling berpengaruh dalam pelatihan model pertama untuk pelatihan model kedua.
 * Membandingkan tingkat kedua model yakni model pertama dengan fitur lengkap dengan fitur model kedua dengan hanya fitur yang paling berpengaruh pada model pertama.
 
 # *Data Understanding*
@@ -294,9 +291,11 @@ Metrik evaluasi yang digunakan pada proyek ini adalah Akurasi, Presisi, Recall, 
 | Macro Avg     | 0.98      | 0.96   | 0.97     | 23878   |
 | Weighted Avg  | 0.97      | 0.97   | 0.97     | 23878   |
 
-Berdasarkan hasil diatas model Random Forest dengan 3 fitur hasil *feature importance* saja yaitu reservation_status_date, arrival_date_week_number, arrival_date_year merupakan pilihan yang lebih baik karena menunjukkan performa yang baik  pada akurasi, presisi, *recall* dan *F1-score* pada kedua set data train dan test, dan cenderung menghindari *overfitting* yang mungkin terjadi pada model Random Forest dengan semua fitur. Dengan hasil metrik pada data uji Accuracy 0.97, pada prediksi 0 (tidak membatalkan pesanan) precision 0.96, recall 1.00 dan f1-score 0.98. Pada prediksi 1 (membatalkan pesanan)  precision 0.99, recall 0.93 dan f1-score 0.96. Dari hasil tersebut sudah memenuhi kebutuhan pengguna untuk memprediksi kemungkinan pembatalan pemesanan hotel dengan akurat. 
+Berdasarkan hasil diatas model Random Forest dengan 3 fitur hasil *feature importance* saja yaitu *reservation_status_date, arrival_date_week_number, arrival_date_year* merupakan pilihan yang lebih baik karena menunjukkan performa yang baik  pada akurasi, presisi, *recall* dan *F1-score* pada kedua set data train dan test, dan cenderung menghindari *overfitting* yang mungkin terjadi pada model Random Forest dengan semua fitur. Dengan hasil metrik pada data uji *Accuracy* 0.97, pada prediksi 0 (tidak membatalkan pesanan) precision 0.96, recall 1.00 dan f1-score 0.98. Pada prediksi 1 (membatalkan pesanan)  precision 0.99, recall 0.93 dan f1-score 0.96. Dari hasil tersebut sudah memenuhi kebutuhan pengguna untuk memprediksi kemungkinan pembatalan pemesanan hotel dengan akurat. Dengan menggunakan 3 fitur dalam hal ini tidak ada pengorbanan informasi yang dibutuhkan untuk modeling.
 
 # Kesimpulan
+Berdasarkan penggunaan *selection feature* dengan menggunakan *feature importance* dari algoritma *random forest*, terdapat fitur-fitur paling berpengaruh yaitu:
+*reservation_status_date, arrival_date_week_number, arrival_date_year*. Hasil metrik dari model menggunakan 3 fitur tersebut ternyata lebih baik daripada penggunaan semua fitur yang dipakai yang cenderung *overfitting*. yaitu model dengan 3 fitur pada data *train* 0.97 dan data *test* 0.97. Kemudian model dengan semua fitur akurasi pada data *train* 1.00 dan data *test* 0.96 dimana kemungkinan cenderung overfitting. Maka dari itu diharapkan hasil dari proyek ini pada data "*test* Akurasi 0.97, pada prediksi 0 (tidak membatalkan pesanan) precision 0.96, recall 1.00 dan f1-score 0.98. Pada prediksi 1 (membatalkan pesanan)  precision 0.99, recall 0.93 dan f1-score 0.96 dapat memprediksi pelanggan akan membatalkan pesanan atau tidak seakurat mungkin.
 
 # Referensi
 [1] I. G. N. Daffa Adnyana, et al., "Pengaruh Seleksi Fitur Pada Algoritma *Machine Learning* Untuk Memprediksi Pembatalan Pesanan Hotel," *Prosiding* Seminar Nasional Mahasiswa Bidang Ilmu Komputer dan Aplikasinya, vol. 2, no. 1, 2021.
